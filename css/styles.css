@@ -1,0 +1,56 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#map-canvas {
+	height: 100%;
+}
+
+#list-view {
+	margin-top: 200px;
+	text-align: center;
+
+}
+
+#list-view li {
+	font-size: 16px;
+	border-bottom: 1px solid #EDEDED;
+}
+
+#list-view li {
+	padding: 10px 60px 10px 15px;
+	display: block;
+	line-height: 1.2;
+}
+
+#search-form {
+	position: absolute;
+	top:5%;
+	text-align: center;
+	width: 100%;
+	background-color: rgba(213, 209, 209, 0.64);
+}
+
+#search-form h1 {
+	  text-shadow: 1px 1px 2px white;
+}
+
+.info-item {
+	display: block;
+	line-height: 1.5;
+}
+
+.more-detail {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.info-label {
+	font-weight: bold;
+}

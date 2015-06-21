@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="map-canvas" data-bind="visible: showMap">
+    </div>
+        <div id="search-form">
+            <h1>Interesting Places in the city of Decatur, Georgia.</h1>
+            <form>
+                <label for="street">Filter types of locations: </label>
+                <select data-bind="options: locationTypes, value: selectedLocationType "></select>
+                <button data-bind="click: toggleVisibility ">List View</button>
+            </form>
+        </div>
+    <div id="list-view" data-bind="visible: showList">
+        <!-- For each location in the filteredLocations observable, create a list item with appropriate content -->
+        <ul data-bind="foreach: filteredLocations">
+            <li>
+                <a href="#" data-bind="text: name, click: $parent.selectDetail"></a>
+                <!-- Only show more detail of the selected locations's place_id matches the selectedPlaceId observable -->
+                <div class="more-detail" data-bind="if: place_id == $parent.selectedPlaceId()?true:false">
+                    <div class="info-item">
+                        <label class="info-label">Primary Category:  </label>
+                        <span data-bind="text: primaryCategory"></span>
+                    </div>
+                    <div class="info-item">
+                        <label class="info-label">Address:  </label>
+                        <span data-bind="text: address"></span>
+                    </div>
+                    <div class="info-item">
+                        <label class="info-label">Phone:  </label>
+                        <span data-bind="text: phone"></span>
+                    </div>
+                    <div class="info-item">
+                        <label class="info-label">Hours Open:  </label>
+                        <span data-bind="text: openHours"></span>
+                    </div>
+                    <div class="info-item">
+                        <label class="info-label">Business URL:  </label>
+                        <a data-bind="attr:{ href: moreInfoUrl }, text: moreInfoUrl"></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <script src="js/lib/knockout-3.3.0.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
