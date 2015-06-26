@@ -5,4 +5,14 @@ This neighborhood webpage displays various locations in the city of Decatur, GA 
 
 The locations that are to be displayed can be filtered by selecting the appropriate location type.  Once selected only places of the selected type will be displayed.
 
-The list view is accessible by clicking the listview button.  This view shows the locations with the selected location types in a list format.  If you click on the location, more details will be displayed.  These additional details have been retrieved from the Yellow Pages service.
+For medium to large devices, a sidebar will display additional details about the location.  For small devices, click on the icon bar button to display this same list view.
+
+Instructions on use:
+Small devices:
+1. Click on any icon on the map to display info about loccation.
+2. For detailed info, click on the icon bar to display sidebar which show a detailed list of location.
+2.  Click on an indivicual location to view additional details.
+
+Medium to Large Devices
+1. Click on any icon on the map to display info about loccation.
+2. For detailed info, click on the location on the sidebar listview to expand more details
